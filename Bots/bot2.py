@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 import random
-import asyncio
+import asyncio from keep_alive import keep_alive
 
 # Bot setup
 intents = discord.Intents.default()
