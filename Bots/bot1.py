@@ -3,7 +3,8 @@ from threading import Thread
 import discord  
 from discord.ext import commands  
 import asyncio  
-import os  from keep_alive import keep_alive
+import os
+from keep_alive import keep_alive
 
 # ✅ Flask keep_alive setup
 app = Flask('')
