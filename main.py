@@ -1,7 +1,7 @@
 from flask import Flask
 import threading
 import keep_alive
-from bots import bot1, bot2  # Import both bots
+from Bots import bot1, bot2  # Import both bots
 
 app = Flask(__name__)
 
