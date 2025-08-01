@@ -1,16 +1,20 @@
 from flask import Flask
-import keep_alive
 import threading
-from bots import bot1  # Import bot1
+import keep_alive
+from bots import bot1, bot2  # Import both bots
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    return "Multi-Bot Host Online!"
+    return "Multi-Bot Server Running ✅"
 
 def start_all_bots():
     threading.Thread(target=bot1.run_bot1).start()
+    threading.Thread(target=bot2.run_bot2).start()
 
+# Start flask server
 keep_alive.keep_alive()
+
+# Start all bots
 start_all_bots()
